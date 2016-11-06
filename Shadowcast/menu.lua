@@ -20,6 +20,7 @@ function menu.draw()
 
 	if menuOn == true then
 		love.graphics.draw(images.logo64, func.getX/4.8, 0, 0, func.coordNum/170, func.coordNum/170)
+		love.graphics.print("Press SPACE to start", func.getX/6.2, func.getY/1.5, 0, func.coordNum/300, func.coordNum/300)
 	end
 
 end

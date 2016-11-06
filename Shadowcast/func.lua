@@ -19,7 +19,3 @@ function UPDATE_FUNCTION()
 	func.update()
 
 end
-
-function DRAW_FUNCTION()
-
-end

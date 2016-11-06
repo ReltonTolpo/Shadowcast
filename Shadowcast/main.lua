@@ -3,6 +3,7 @@ require "menu"
 require "images"
 require "func"
 require "sockets"
+require "gameView"
 
 function love.load()
 
@@ -12,16 +13,17 @@ function love.load()
 	images.load()
 	func.load()
 	sockets.load()
+	gameView.load()
 
 end
 
-function love.update(deltatime)
+function love.update(dt)
 
 	UPDATE_MENU()
 	UPDATE_IMAGES()
 	UPDATE_FUNCTION()
 	if menuOn == false then
-		UPDATE_SOCKETS(deltatime)
+		UPDATE_SOCKETS(dt)
 	end
 
 end
@@ -29,9 +31,8 @@ end
 function love.draw()
 
 	DRAW_MENU()
-	DRAW_FUNCTION()
 	if menuOn == false then
-		DRAW_SOCKETS()
+		DRAW_GAMEVIEW()
 	end
 
 end

@@ -34,7 +34,7 @@ function sockets.update(dt)
 		if love.keyboard.isDown('s') then y=y+(speed*dt) end
 		if love.keyboard.isDown('a') then x=x-(speed*dt) end
 		if love.keyboard.isDown('d') then x=x+(speed*dt) end
-		if love.keyboard.isDown('lctrl') then speed = 1000 else speed = 100 end
+		if love.keyboard.isDown('lalt') then speed = 3000 else speed = 1000 end
 		local dg = string.format("%s %s %f %f", entity, 'move', x, y)
 		udp:send(dg)
 		local dg = string.format("%s %s $", entity, 'update')
